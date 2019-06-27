@@ -1,0 +1,29 @@
+<!--miniprogram/pages/two/two.wxml-->
+<page>
+<view class="head"></view>
+<view class="detail" style="margin-top:270rpx">
+<text class="title">就诊日期</text>
+<text class="value">{{time.y+"年"+time.m+"月"+time.d+"日"}}</text>
+</view>
+<view class="detail" style="margin-top:366rpx">
+<text class="title">候诊时间</text>
+<text class="value">{{clinicTime}}</text>
+</view>
+<view class="detail" style="margin-top:462rpx">
+<text class="title">就诊地点</text>
+<text class="value">{{clinicPlace}}</text>
+</view>
+<view class="detail" style="margin-top:568rpx">
+<text class="title">就诊人</text>
+<input class="inputvalue" bindblur="onpatientInput" value="{{patient}}"></input>
+</view>
+<view class="detail" style="margin-top:664rpx">
+<text class="title">手机号</text>
+<input type="number" bindblur="onphoneInput" class="inputvalue" value="{{phoneNumber}}"></input>
+</view>
+<view class="tips" style="margin-top:750rpx;right:20rpx">{{error}}</view>
+<view class="tips" style="bottom:150rpx;margin-left: 20rpx;">请仔细检查就诊信息是否正确！</view>
+<view class="down">
+<button class="surebtn" bindtap="onSure">确定预约</button>
+</view>
+</page>
